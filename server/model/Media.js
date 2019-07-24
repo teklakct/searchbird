@@ -15,8 +15,8 @@ export default class Media {
     }
 
     static fromGiphy(giphyObj) {
-        const URL = giphyObj.images.original_still.url;
-        const previewURL = giphyObj.images.preview.mp4;
+        const URL = giphyObj.images.downsized.url;
+        const previewURL = giphyObj.images.downsized_small.url;
 
         return new this(URL, previewURL);
     }
