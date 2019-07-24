@@ -14,7 +14,11 @@
             </div>
         </header>
 
-        <search-result :medias="images"></search-result>
+        <section>
+            <div class="container">
+                <search-result :medias="images"></search-result>
+            </div>
+        </section>
     </div>
 </template>
 <script>
