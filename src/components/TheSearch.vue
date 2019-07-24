@@ -16,7 +16,7 @@
 
         <section>
             <div class="container">
-                <search-result :medias="images"></search-result>
+                <search-result :medias="images" :dataLoaded="dataLoaded" :searchTerm="searchTerm"></search-result>
             </div>
         </section>
     </div>
@@ -33,12 +33,16 @@
         components: {SearchForm, SearchResult},
         data() {
             return {
-                images: []
+                images: [],
+                dataLoaded: false,
+                searchTerm: ''
             }
         },
         methods: {
             async searchMedia(string) {
                 this.images = await mediaDAO.findImages(string)
+                this.searchTerm = string
+                this.dataLoaded = true
             },
         }
     }
