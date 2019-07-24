@@ -2,13 +2,44 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Gets GIF and Images">
+        <meta name="author" content="Paweł Tekliński">
         <title>SearchBird</title>
     </head>
     <body>
         <div id="searchbird">
-            <h1>{{ message }}</h1>
-            <button v-on:click="hello">SayHello</button>
-            <p>Server says: {{ serverMessage }}</p>
+            <nav class="navbar navbar-light bg-light static-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#">SearchBird</a>
+                </div>
+            </nav>
+
+            <header id="mainhead" class="jumbotron text-white text-center">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-9 mx-auto">
+                            <h1 class="mb-5">Find your favourite GIFs, Images and more!</h1>
+                        </div>
+                        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-12 ">
+                                        <input type="text" class="form-control form-control-lg" placeholder="Enter what are you looking for?">
+                                    </div>
+                                    <div class="col-12 ">
+                                        <button type="submit" class="btn btn-block btn-lg btn-primary">Search</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <dashboard></dashboard>
         </div>
     </body>
 </html>
