@@ -9,12 +9,13 @@ Application that gets GIF and Images from multiple data sources
 $ npm ci
 ```
 
-#### Parameters file
+#### Setup ENVIRONMENT variables:
 
 In order to retrieve data from sources, You need to obtain your secret API key from
 [Giphy](https://developers.giphy.com/docs) and [Pixabay](https://pixabay.com/api/docs/).
+Next create file `.env.local` and setup with correct values for your environment.
 
-Next open file `dotenv` and follow the instructions.
+For detailed info see ["dotenv" project repository](https://github.com/motdotla/dotenv#readme).
 
 ## Application
 
