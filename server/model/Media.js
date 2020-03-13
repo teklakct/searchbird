@@ -1,23 +1,17 @@
 export default class Media {
-    constructor(URL, thumbURL = null) {
-        if (!thumbURL) {
-            thumbURL = URL;
-        }
-
+    constructor(URL) {
         this.url = URL;
-        this.thumbURL = thumbURL;
     }
 
     static fromPixabay(pixabayObj) {
-        const { largeImageURL, previewURL} = pixabayObj;
+        const { largeImageURL } = pixabayObj;
 
-        return new this(largeImageURL, previewURL);
+        return new this(largeImageURL);
     }
 
     static fromGiphy(giphyObj) {
         const URL = giphyObj.images.downsized.url;
-        const previewURL = giphyObj.images.downsized_small.url;
 
-        return new this(URL, previewURL);
+        return new this(URL);
     }
 }

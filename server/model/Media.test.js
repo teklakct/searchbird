@@ -117,7 +117,7 @@ describe("Media model", () => {
                     "size": "89352"
                 },
                 "downsized": {
-                    "url": "https://media2.giphy.com/media/5UEAC8r5IRiN4YRnuG/giphy.gif?cid=344f30505d38b2ca445a6b7867b2b6d3&rid=giphy.gif",
+                    "url": fullURL,
                     "width": "480",
                     "height": "270",
                     "size": "1024025"
@@ -238,12 +238,12 @@ describe("Media model", () => {
     test("allows to create from pixabay object", () => {
         const media = Media.fromPixabay(pixabay);
 
-        expect(media.URL()).toBe(fullURL)
+        expect(media.url).toBe(fullURL)
     })
 
     test("allows to create from giphy object", () => {
         const media = Media.fromGiphy(giphy);
 
-        expect(media.URL()).toBe(fullURL)
+        expect(media.url).toBe(fullURL)
     })
 })

@@ -1,9 +1,6 @@
 import Vue from 'vue'
-import TheSearch from './components/TheSearch'
-
-import './assets/style/main.scss'
+import App from './App';
 
 new Vue({
-    el: '#searchbird',
-    components: {TheSearch}
-})
+    render: h => h(App),
+}).$mount('#app');
